@@ -12,7 +12,12 @@ class Car @Inject constructor(
         Log.d(TAG, "drive: Vrooooooom!!!")
     }
 
+    @Inject
+    fun fillUpFuel(fuel: Fuel) {
+        fuel.setListener(this)
+    }
+
     companion object {
-        private const val TAG = "Car"
+        const val TAG = "Car"
     }
 }
