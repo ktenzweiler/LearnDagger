@@ -1,7 +1,7 @@
-package com.example.learndagger
+package com.example.learndagger.car
 
 import android.util.Log
-import com.example.learndagger.Car.Companion.TAG
+import com.example.learndagger.car.Car.Companion.TAG
 
 class Tires {
     // Pretend we do not own this class

@@ -1,5 +1,8 @@
-package com.example.learndagger
+package com.example.learndagger.di
 
+import com.example.learndagger.car.Rims
+import com.example.learndagger.car.Tires
+import com.example.learndagger.car.Wheels
 import dagger.Module
 import dagger.Provides
 
