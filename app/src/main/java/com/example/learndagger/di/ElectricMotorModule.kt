@@ -9,5 +9,5 @@ import dagger.Module
 abstract class ElectricMotorModule {
 
     @Binds
-    abstract fun provideElectricMotor(electricMotor: ElectricMotor): Engine
+    abstract fun bindElectricMotor(electricMotor: ElectricMotor): Engine
 }

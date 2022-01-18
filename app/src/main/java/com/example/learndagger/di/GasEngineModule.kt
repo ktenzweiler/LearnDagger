@@ -9,5 +9,5 @@ import dagger.Module
 abstract class GasEngineModule {
 
     @Binds
-    abstract fun provideGasEngine(gasEngine: GasEngine): Engine
+    abstract fun bindGasEngine(gasEngine: GasEngine): Engine
 }
