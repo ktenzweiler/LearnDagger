@@ -4,10 +4,11 @@ import com.example.learndagger.car.ElectricMotor
 import com.example.learndagger.car.Engine
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class ElectricMotorModule {
+class ElectricMotorModule constructor(private val horsePower: Int){
 
-    @Binds
-    abstract fun bindEngine(electricMotor: ElectricMotor) : Engine
+    @Provides
+    fun provideElectricMotor() : Engine = ElectricMotor(horsePower)
 }
