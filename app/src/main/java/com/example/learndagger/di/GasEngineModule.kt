@@ -6,8 +6,8 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class GasEngineModule constructor(private val horsePower: Int) {
+class GasEngineModule {
 
     @Provides
-    fun provideGasEngine(): Engine = GasEngine(horsePower)
+    fun provideGasEngine(gasEngine: GasEngine) : Engine = gasEngine
 }

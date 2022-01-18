@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.learndagger.car.Car
 import com.example.learndagger.di.DaggerCarComponent
-import com.example.learndagger.di.ElectricMotorModule
-import com.example.learndagger.di.GasEngineModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -14,10 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var car: Car
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val component = DaggerCarComponent.builder()
-            .electricMotorModule(ElectricMotorModule(1000))
-            .build()
-
+        val component = DaggerCarComponent.create()
         component.inject(this)
 
         super.onCreate(savedInstanceState)
