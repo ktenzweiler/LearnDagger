@@ -15,10 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val component = (application as MyApplication).getAppComponent()
-            .getActivityComponentBuilder()
-            .horsePower(1000)
-            .cylinders(0)
-            .build()
+            .getActivityComponentFactory()
+            .create(1000, 0)
 
         component.inject(this)
 

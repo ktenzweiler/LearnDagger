@@ -5,10 +5,9 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-object DriverModule {
+class DriverModule constructor(private val name: String) {
 
-    @JvmStatic
     @PerApplication
     @Provides
-    fun provideDriver() = Driver()
+    fun provideDriver() = Driver(name)
 }

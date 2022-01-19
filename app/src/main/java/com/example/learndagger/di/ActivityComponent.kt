@@ -11,16 +11,12 @@ import dagger.Subcomponent
 )
 interface ActivityComponent {
 
-    @Subcomponent.Builder
-    interface Builder {
-
-        @BindsInstance
-        fun horsePower(@HorsePower horsePower: Int): Builder
-
-        @BindsInstance
-        fun cylinders(@Cylinders cylinders: Int): Builder
-
-        fun build(): ActivityComponent
+    @Subcomponent.Factory
+    interface Factory {
+        fun create(
+            @BindsInstance @HorsePower horsePower: Int,
+            @BindsInstance @Cylinders cylinders: Int
+        ): ActivityComponent
     }
 
     fun getCar(): Car

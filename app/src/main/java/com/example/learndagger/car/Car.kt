@@ -13,7 +13,7 @@ class Car @Inject constructor(
 
     fun drive() {
         engine.start()
-        Log.d(TAG, "Driver = $driver is driver car = $this")
+        Log.d(TAG, "Driver = ${driver.name} car = $this")
     }
 
     @Inject
