@@ -3,7 +3,6 @@ package com.example.learndagger
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.learndagger.car.Car
-import com.example.learndagger.di.GasEngineModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +15,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val component = (application as MyApplication).getAppComponent()
-            .getActivityComponent(GasEngineModule(300, 8))
+            .getActivityComponentBuilder()
+            .horsePower(1000)
+            .cylinders(0)
+            .build()
 
         component.inject(this)
 
