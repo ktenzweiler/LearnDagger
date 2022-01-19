@@ -6,12 +6,12 @@ import com.example.learndagger.di.DaggerAppComponent
 
 class MyApplication : Application() {
 
-    private lateinit var activityComponent: AppComponent
+    private lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
-        activityComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent.create()
     }
 
-    fun getAppComponent() = activityComponent
+    fun getAppComponent() = appComponent
 }
