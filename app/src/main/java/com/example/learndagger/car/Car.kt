@@ -4,13 +4,14 @@ import android.util.Log
 import javax.inject.Inject
 
 class Car @Inject constructor(
+    private val driver: Driver,
     private val wheels: Wheels,
     private val engine: Engine
 ) {
 
     fun drive() {
         engine.start()
-        Log.d(TAG, "drive: Vrooooooom!!!")
+        Log.d(TAG, "Driver = $driver is driver car = $this")
     }
 
     @Inject
