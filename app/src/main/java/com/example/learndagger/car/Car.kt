@@ -1,8 +1,10 @@
 package com.example.learndagger.car
 
 import android.util.Log
+import com.example.learndagger.di.PerActivity
 import javax.inject.Inject
 
+@PerActivity
 class Car @Inject constructor(
     private val driver: Driver,
     private val wheels: Wheels,
